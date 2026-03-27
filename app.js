@@ -122,9 +122,32 @@
     });
   }
 
-  // ── Render recipe card (minimal for US-1, expanded in US-2) ─
+  // ── Render recipe card (US-2) ──────────────────────────────
   function renderRecipeCard(recipe) {
-    recipeCard.innerHTML = `<h2 style="text-align:center;color:var(--accent);margin-bottom:0.25rem;">${recipe.name}</h2>`;
+    const categoryLabels = {
+      liquid: "Liquid",
+      fruit: "Fruit",
+      crunch: "Crunch",
+      oomph: "Oomph",
+    };
+
+    const categorySections = CATEGORIES.map((cat) => {
+      const items = recipe[cat]
+        .map(
+          (ing) =>
+            `<li class="recipe-card__ingredient"><span class="recipe-card__ingredient-emoji">${ing.emoji}</span> ${ing.name}</li>`
+        )
+        .join("");
+      return `<div class="recipe-card__category">
+        <h3 class="recipe-card__category-title">${categoryLabels[cat]}</h3>
+        <ul class="recipe-card__ingredient-list">${items}</ul>
+      </div>`;
+    }).join("");
+
+    recipeCard.innerHTML = `
+      <h2 class="recipe-card__title">${recipe.name}</h2>
+      <div class="recipe-card__categories">${categorySections}</div>
+    `;
     recipeCard.classList.remove("hidden");
   }
 

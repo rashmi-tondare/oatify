@@ -44,10 +44,10 @@
 **US-2: View the full recipe**
 > As a user, I want to see the full recipe after the slots land so that I know all the ingredients I need.
 
-- [ ] A recipe card reveals below the slot machine after all reels have landed.
-- [ ] The recipe card displays the recipe name as a title.
-- [ ] Ingredients are listed grouped by category (Liquid, Fruit, Crunch, Oomph) with ingredient names.
-- [ ] No quantities are shown on the recipe card.
+- [x] A recipe card reveals below the slot machine after all reels have landed.
+- [x] The recipe card displays the recipe name as a title.
+- [x] Ingredients are listed grouped by category (Liquid, Fruit, Crunch, Oomph) with ingredient names.
+- [x] No quantities are shown on the recipe card.
 
 **US-3: Understand the base recipe**
 > As a user, I want to see a base recipe so that I know the foundational ratio of oats to liquid.
