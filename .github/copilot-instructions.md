@@ -59,8 +59,8 @@
 **US-4: Be aware of dietary considerations**
 > As a user, I want to see a disclaimer so that I'm reminded to account for my own dietary restrictions and allergies.
 
-- [ ] A footer is visible at the bottom of the page.
-- [ ] The footer contains a disclaimer stating that recipes are suggestions and users should consider their own dietary restrictions and allergies.
+- [x] A footer is visible at the bottom of the page.
+- [x] The footer contains a disclaimer stating that recipes are suggestions and users should consider their own dietary restrictions and allergies.
 
 **US-5: Re-spin for a new recipe**
 > As a user, I want to spin again after seeing a recipe so that I can get a different suggestion.

@@ -248,6 +248,21 @@ body {
   margin-right: 0.25rem;
 }
 
+/* ===== Footer (US-4) ===== */
+.footer {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.footer__disclaimer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 /* ===== Responsive: 2×2 grid on mobile ===== */
 @media (max-width: 767px) {
   .reels {
