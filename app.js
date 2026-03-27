@@ -6,6 +6,7 @@
   const CYCLE_INTERVAL_MS = 80;           // emoji swap speed while spinning
   const STAGGER_DELAY_MS = 400;           // delay between each reel landing
   const BASE_SPIN_DURATION_MS = 1200;     // how long the first reel spins
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ── DOM refs ───────────────────────────────────────────────
   const spinBtn = document.getElementById("spin-btn");
@@ -20,7 +21,7 @@
 
   // ── State ──────────────────────────────────────────────────
   let recipes = [];
-  let emojiPools = { liquid: [], fruit: [], crunch: [], oomph: [] };
+  const emojiPools = { liquid: [], fruit: [], crunch: [], oomph: [] };
   let lastRecipeIndex = -1;
   let spinning = false;
 
@@ -28,14 +29,18 @@
   async function loadRecipes() {
     try {
       const res = await fetch("recipes.json");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        console.error("Failed to load recipes: HTTP", res.status);
+        spinBtn.textContent = "⚠️ Recipe data unavailable";
+        return;
+      }
       const data = await res.json();
       recipes = data.recipes;
       buildEmojiPools();
+      spinBtn.disabled = false;
     } catch (err) {
       console.error("Failed to load recipes:", err);
       spinBtn.textContent = "⚠️ Recipe data unavailable";
-      spinBtn.disabled = true;
     }
   }
 
@@ -76,36 +81,38 @@
 
     // Hide previous recipe card
     recipeCard.classList.add("hidden");
-    recipeCard.innerHTML = "";
+    recipeCard.textContent = "";
 
     // Pick the winning recipe
-    const chosenIndex = pickRecipeIndex();
-    const recipe = recipes[chosenIndex];
+    const recipe = recipes[pickRecipeIndex()];
 
     // Start all reels spinning simultaneously
     const intervals = {};
+    const cycleMs = prefersReducedMotion ? 150 : CYCLE_INTERVAL_MS;
+    const baseMs = prefersReducedMotion ? 300 : BASE_SPIN_DURATION_MS;
+    const staggerMs = prefersReducedMotion ? 100 : STAGGER_DELAY_MS;
+
     CATEGORIES.forEach((cat) => {
       reelWindows[cat].classList.remove("landed");
       reelWindows[cat].classList.add("spinning");
 
-      let pool = emojiPools[cat];
+      const pool = emojiPools[cat];
       let i = 0;
       intervals[cat] = setInterval(() => {
         i = (i + 1) % pool.length;
         reelEmojis[cat].textContent = pool[i];
-      }, CYCLE_INTERVAL_MS);
+      }, cycleMs);
     });
 
     // Staggered landing: Liquid → Fruit → Crunch → Oomph
     CATEGORIES.forEach((cat, catIdx) => {
-      const landTime = BASE_SPIN_DURATION_MS + catIdx * STAGGER_DELAY_MS;
+      const landTime = baseMs + catIdx * staggerMs;
 
       setTimeout(() => {
         clearInterval(intervals[cat]);
 
         // Land on the hero emoji (first ingredient) of the selected recipe
-        const heroEmoji = recipe[cat][0].emoji;
-        reelEmojis[cat].textContent = heroEmoji;
+        reelEmojis[cat].textContent = recipe[cat][0].emoji;
 
         reelWindows[cat].classList.remove("spinning");
         reelWindows[cat].classList.add("landed");
@@ -131,23 +138,46 @@
       oomph: "Oomph",
     };
 
-    const categorySections = CATEGORIES.map((cat) => {
-      const items = recipe[cat]
-        .map(
-          (ing) =>
-            `<li class="recipe-card__ingredient"><span class="recipe-card__ingredient-emoji">${ing.emoji}</span> ${ing.name}</li>`
-        )
-        .join("");
-      return `<div class="recipe-card__category">
-        <h3 class="recipe-card__category-title">${categoryLabels[cat]}</h3>
-        <ul class="recipe-card__ingredient-list">${items}</ul>
-      </div>`;
-    }).join("");
+    recipeCard.textContent = "";
 
-    recipeCard.innerHTML = `
-      <h2 class="recipe-card__title">${recipe.name}</h2>
-      <div class="recipe-card__categories">${categorySections}</div>
-    `;
+    const title = document.createElement("h2");
+    title.className = "recipe-card__title";
+    title.textContent = recipe.name;
+    recipeCard.appendChild(title);
+
+    const grid = document.createElement("div");
+    grid.className = "recipe-card__categories";
+
+    CATEGORIES.forEach((cat) => {
+      const section = document.createElement("div");
+      section.className = "recipe-card__category";
+
+      const heading = document.createElement("h3");
+      heading.className = "recipe-card__category-title";
+      heading.textContent = categoryLabels[cat];
+      section.appendChild(heading);
+
+      const list = document.createElement("ul");
+      list.className = "recipe-card__ingredient-list";
+
+      recipe[cat].forEach((ing) => {
+        const li = document.createElement("li");
+        li.className = "recipe-card__ingredient";
+
+        const emojiSpan = document.createElement("span");
+        emojiSpan.className = "recipe-card__ingredient-emoji";
+        emojiSpan.textContent = ing.emoji;
+
+        li.appendChild(emojiSpan);
+        li.appendChild(document.createTextNode(" " + ing.name));
+        list.appendChild(li);
+      });
+
+      section.appendChild(list);
+      grid.appendChild(section);
+    });
+
+    recipeCard.appendChild(grid);
     recipeCard.classList.remove("hidden");
   }
 
