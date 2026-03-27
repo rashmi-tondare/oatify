@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oatify — Overnight Oats Slot Machine</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="machine">
+    <header class="machine__banner">
+      <h1 class="machine__title">🥣 Oatify</h1>
+      <p class="machine__subtitle">Spin for your next overnight oats recipe!</p>
+    </header>
+
+    <div class="reels" id="reels">
+      <div class="reel" data-category="liquid">
+        <span class="reel__label">Liquid</span>
+        <div class="reel__window" id="reel-liquid">
+          <span class="reel__emoji">🥛</span>
+        </div>
+      </div>
+      <div class="reel" data-category="fruit">
+        <span class="reel__label">Fruit</span>
+        <div class="reel__window" id="reel-fruit">
+          <span class="reel__emoji">🍓</span>
+        </div>
+      </div>
+      <div class="reel" data-category="crunch">
+        <span class="reel__label">Crunch</span>
+        <div class="reel__window" id="reel-crunch">
+          <span class="reel__emoji">🥜</span>
+        </div>
+      </div>
+      <div class="reel" data-category="oomph">
+        <span class="reel__label">Oomph</span>
+        <div class="reel__window" id="reel-oomph">
+          <span class="reel__emoji">🌱</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="spin-btn" id="spin-btn" type="button">🎰 Spin!</button>
+
+    <div class="recipe-card hidden" id="recipe-card" aria-live="polite"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,187 @@
+{
+  "recipes": [
+    {
+      "name": "Tropical Sunrise",
+      "liquid": [
+        { "name": "Coconut Milk", "emoji": "🥥" },
+        { "name": "Pineapple Juice", "emoji": "🍍" }
+      ],
+      "fruit": [
+        { "name": "Mango", "emoji": "🥭" },
+        { "name": "Banana", "emoji": "🍌" }
+      ],
+      "crunch": [
+        { "name": "Toasted Coconut Flakes", "emoji": "🥥" },
+        { "name": "Macadamia Nuts", "emoji": "🌰" }
+      ],
+      "oomph": [
+        { "name": "Chia Seeds", "emoji": "🌱" },
+        { "name": "Vanilla Extract", "emoji": "🧴" }
+      ]
+    },
+    {
+      "name": "Berry Bliss",
+      "liquid": [
+        { "name": "Oat Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Blueberries", "emoji": "🫐" },
+        { "name": "Strawberries", "emoji": "🍓" },
+        { "name": "Raspberries", "emoji": "🔴" }
+      ],
+      "crunch": [
+        { "name": "Granola", "emoji": "🥣" }
+      ],
+      "oomph": [
+        { "name": "Greek Yogurt", "emoji": "🍦" },
+        { "name": "Flax Seeds", "emoji": "🌾" }
+      ]
+    },
+    {
+      "name": "PB & J Overnight",
+      "liquid": [
+        { "name": "Almond Milk", "emoji": "🌰" }
+      ],
+      "fruit": [
+        { "name": "Strawberries", "emoji": "🍓" },
+        { "name": "Raspberries", "emoji": "🔴" }
+      ],
+      "crunch": [
+        { "name": "Crushed Peanuts", "emoji": "🥜" }
+      ],
+      "oomph": [
+        { "name": "Peanut Butter", "emoji": "🥜" },
+        { "name": "Chia Seeds", "emoji": "🌱" }
+      ]
+    },
+    {
+      "name": "Apple Pie Oats",
+      "liquid": [
+        { "name": "Whole Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Apple", "emoji": "🍎" },
+        { "name": "Raisins", "emoji": "🍇" }
+      ],
+      "crunch": [
+        { "name": "Walnuts", "emoji": "🌰" },
+        { "name": "Graham Cracker Crumbs", "emoji": "🍪" }
+      ],
+      "oomph": [
+        { "name": "Cinnamon", "emoji": "🫙" },
+        { "name": "Nutmeg", "emoji": "🧂" }
+      ]
+    },
+    {
+      "name": "Chocolate Dream",
+      "liquid": [
+        { "name": "Chocolate Milk", "emoji": "🍫" }
+      ],
+      "fruit": [
+        { "name": "Banana", "emoji": "🍌" },
+        { "name": "Cherries", "emoji": "🍒" }
+      ],
+      "crunch": [
+        { "name": "Cacao Nibs", "emoji": "🫘" },
+        { "name": "Almonds", "emoji": "🌰" }
+      ],
+      "oomph": [
+        { "name": "Cocoa Powder", "emoji": "🍫" },
+        { "name": "Protein Powder", "emoji": "💪" }
+      ]
+    },
+    {
+      "name": "Matcha Zen",
+      "liquid": [
+        { "name": "Oat Milk", "emoji": "🍵" }
+      ],
+      "fruit": [
+        { "name": "Kiwi", "emoji": "🥝" },
+        { "name": "Banana", "emoji": "🍌" }
+      ],
+      "crunch": [
+        { "name": "Pistachios", "emoji": "🟢" },
+        { "name": "Pumpkin Seeds", "emoji": "🎃" }
+      ],
+      "oomph": [
+        { "name": "Matcha Powder", "emoji": "🍵" },
+        { "name": "Hemp Seeds", "emoji": "🌿" }
+      ]
+    },
+    {
+      "name": "Banana Bread Bowl",
+      "liquid": [
+        { "name": "Almond Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Banana", "emoji": "🍌" }
+      ],
+      "crunch": [
+        { "name": "Pecans", "emoji": "🌰" },
+        { "name": "Walnut Pieces", "emoji": "🥜" }
+      ],
+      "oomph": [
+        { "name": "Cinnamon", "emoji": "🫙" },
+        { "name": "Vanilla Extract", "emoji": "🧴" },
+        { "name": "Brown Sugar", "emoji": "🟤" }
+      ]
+    },
+    {
+      "name": "Lemon Poppy Seed",
+      "liquid": [
+        { "name": "Greek Yogurt", "emoji": "🍦" },
+        { "name": "Oat Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Lemon Zest", "emoji": "🍋" },
+        { "name": "Blueberries", "emoji": "🫐" }
+      ],
+      "crunch": [
+        { "name": "Poppy Seeds", "emoji": "⚫" },
+        { "name": "Sliced Almonds", "emoji": "🌰" }
+      ],
+      "oomph": [
+        { "name": "Honey Drizzle", "emoji": "🍯" },
+        { "name": "Vanilla Extract", "emoji": "🧴" }
+      ]
+    },
+    {
+      "name": "Pumpkin Spice",
+      "liquid": [
+        { "name": "Oat Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Pumpkin Purée", "emoji": "🎃" },
+        { "name": "Banana", "emoji": "🍌" }
+      ],
+      "crunch": [
+        { "name": "Pecans", "emoji": "🌰" },
+        { "name": "Granola", "emoji": "🥣" }
+      ],
+      "oomph": [
+        { "name": "Pumpkin Spice", "emoji": "🎃" },
+        { "name": "Maple Syrup", "emoji": "🍁" }
+      ]
+    },
+    {
+      "name": "Espresso Buzz",
+      "liquid": [
+        { "name": "Cold Brew Coffee", "emoji": "☕" },
+        { "name": "Oat Milk", "emoji": "🥛" }
+      ],
+      "fruit": [
+        { "name": "Banana", "emoji": "🍌" },
+        { "name": "Dates", "emoji": "🌴" }
+      ],
+      "crunch": [
+        { "name": "Dark Chocolate Chips", "emoji": "🍫" },
+        { "name": "Hazelnuts", "emoji": "🌰" }
+      ],
+      "oomph": [
+        { "name": "Protein Powder", "emoji": "💪" },
+        { "name": "Cinnamon", "emoji": "🫙" }
+      ]
+    }
+  ]
+}
+
