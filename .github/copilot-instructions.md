@@ -52,9 +52,9 @@
 **US-3: Understand the base recipe**
 > As a user, I want to see a base recipe so that I know the foundational ratio of oats to liquid.
 
-- [ ] A static prep blurb is permanently visible on the page (does not depend on spinning).
-- [ ] The blurb states the base recipe: 1:1 ratio of rolled oats to whatever liquid the slot machine selects.
-- [ ] The blurb includes sweetener suggestions (honey, date paste, regular sugar, etc.).
+- [x] A static prep blurb is permanently visible on the page (does not depend on spinning).
+- [x] The blurb states the base recipe: 1:1 ratio of rolled oats to whatever liquid the slot machine selects.
+- [x] The blurb includes sweetener suggestions (honey, date paste, regular sugar, etc.).
 
 **US-4: Be aware of dietary considerations**
 > As a user, I want to see a disclaimer so that I'm reminded to account for my own dietary restrictions and allergies.

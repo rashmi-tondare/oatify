@@ -154,6 +154,29 @@ body {
   cursor: not-allowed;
 }
 
+/* ===== Prep Blurb (US-3) ===== */
+.prep-blurb {
+  width: 100%;
+  text-align: center;
+  background: var(--bg);
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.prep-blurb__title {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.prep-blurb__text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-top: 0.35rem;
+}
+
 /* ===== Recipe Card (US-2) ===== */
 .recipe-card {
   width: 100%;
