@@ -1,0 +1,185 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F5F0E8;
+  --accent: #D4A84B;
+  --text: #5C4033;
+  --text-muted: #8B7355;
+  --card-bg: #FFFDF7;
+  --shadow: rgba(92, 64, 51, 0.15);
+  --radius: 16px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* ===== Slot Machine Frame ===== */
+.machine {
+  width: 100%;
+  max-width: 600px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px var(--shadow);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ===== Banner / Title ===== */
+.machine__banner {
+  text-align: center;
+}
+
+.machine__title {
+  font-size: 2.25rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.machine__subtitle {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ===== Reels Container ===== */
+.reels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ===== Single Reel ===== */
+.reel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.reel__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.reel__window {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 100px;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.reel__emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.1s;
+}
+
+/* Spinning state — slight vertical blur effect */
+.reel__window.spinning .reel__emoji {
+  animation: reelCycle 0.08s steps(1) infinite;
+}
+
+/* Landing "pop" */
+.reel__window.landed .reel__emoji {
+  animation: landPop 0.35s ease-out;
+}
+
+@keyframes landPop {
+  0%   { transform: scale(1.4); }
+  50%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* ===== Spin Button ===== */
+.spin-btn {
+  appearance: none;
+  border: none;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.spin-btn:hover:not(:disabled) {
+  background: #c89a3f;
+  transform: translateY(-1px);
+}
+
+.spin-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.spin-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Recipe Card (US-2 placeholder — hidden for now) ===== */
+.recipe-card {
+  width: 100%;
+  text-align: left;
+}
+
+.recipe-card.hidden {
+  display: none;
+}
+
+/* ===== Responsive: 2×2 grid on mobile ===== */
+@media (max-width: 767px) {
+  .reels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .machine {
+    padding: 1.5rem 1rem;
+  }
+
+  .machine__title {
+    font-size: 1.75rem;
+  }
+
+  .reel__emoji {
+    font-size: 2rem;
+  }
+}
+
