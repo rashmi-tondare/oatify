@@ -29,7 +29,11 @@
   async function loadRecipes() {
     try {
       const res = await fetch("recipes.json");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        console.error("Failed to load recipes: HTTP", res.status);
+        spinBtn.textContent = "⚠️ Recipe data unavailable";
+        return;
+      }
       const data = await res.json();
       recipes = data.recipes;
       buildEmojiPools();
@@ -37,7 +41,6 @@
     } catch (err) {
       console.error("Failed to load recipes:", err);
       spinBtn.textContent = "⚠️ Recipe data unavailable";
-      spinBtn.disabled = true;
     }
   }
 
@@ -110,8 +113,7 @@
         clearInterval(intervals[cat]);
 
         // Land on the hero emoji (first ingredient) of the selected recipe
-        const heroEmoji = recipe[cat][0].emoji;
-        reelEmojis[cat].textContent = heroEmoji;
+        reelEmojis[cat].textContent = recipe[cat][0].emoji;
 
         reelWindows[cat].classList.remove("spinning");
         reelWindows[cat].classList.add("landed");
