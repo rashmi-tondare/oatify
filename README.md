@@ -6,6 +6,7 @@
 ![CSS](https://img.shields.io/badge/CSS-Custom-blue)
 ![JavaScript](https://img.shields.io/badge/JS-Vanilla-yellow)
 ![No Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen)
+[![Vibe Coded](https://img.shields.io/badge/Vibe%20Coded-Yes!-blueviolet)](https://github.com/mar1/vibe-coded)
 
 ## Overview
 
