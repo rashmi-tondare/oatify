@@ -21,7 +21,7 @@
 
   // ── State ──────────────────────────────────────────────────
   let recipes = [];
-  let emojiPools = { liquid: [], fruit: [], crunch: [], oomph: [] };
+  const emojiPools = { liquid: [], fruit: [], crunch: [], oomph: [] };
   let lastRecipeIndex = -1;
   let spinning = false;
 
@@ -84,8 +84,7 @@
     recipeCard.textContent = "";
 
     // Pick the winning recipe
-    const chosenIndex = pickRecipeIndex();
-    const recipe = recipes[chosenIndex];
+    const recipe = recipes[pickRecipeIndex()];
 
     // Start all reels spinning simultaneously
     const intervals = {};
@@ -97,7 +96,7 @@
       reelWindows[cat].classList.remove("landed");
       reelWindows[cat].classList.add("spinning");
 
-      let pool = emojiPools[cat];
+      const pool = emojiPools[cat];
       let i = 0;
       intervals[cat] = setInterval(() => {
         i = (i + 1) % pool.length;
