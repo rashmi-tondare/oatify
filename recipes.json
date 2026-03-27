@@ -86,26 +86,23 @@
         { "name": "Almonds", "emoji": "🌰" }
       ],
       "oomph": [
-        { "name": "Cocoa Powder", "emoji": "🍫" },
-        { "name": "Protein Powder", "emoji": "💪" }
+        { "name": "Cocoa Powder", "emoji": "🍫" }
       ]
     },
     {
-      "name": "Matcha Zen",
+      "name": "Golden Saffron Royale",
       "liquid": [
-        { "name": "Oat Milk", "emoji": "🍵" }
+        { "name": "Whole Milk", "emoji": "🥛" }
       ],
       "fruit": [
-        { "name": "Kiwi", "emoji": "🥝" },
-        { "name": "Banana", "emoji": "🍌" }
+        { "name": "Pomegranate", "emoji": "🔴" }
       ],
       "crunch": [
-        { "name": "Pistachios", "emoji": "🟢" },
-        { "name": "Pumpkin Seeds", "emoji": "🎃" }
+        { "name": "Almonds", "emoji": "🌰" },
+        { "name": "Cashews", "emoji": "🥜" }
       ],
       "oomph": [
-        { "name": "Matcha Powder", "emoji": "🍵" },
-        { "name": "Hemp Seeds", "emoji": "🌿" }
+        { "name": "Saffron", "emoji": "🌼" }
       ]
     },
     {
@@ -137,7 +134,6 @@
         { "name": "Blueberries", "emoji": "🫐" }
       ],
       "crunch": [
-        { "name": "Poppy Seeds", "emoji": "⚫" },
         { "name": "Sliced Almonds", "emoji": "🌰" }
       ],
       "oomph": [
@@ -178,7 +174,6 @@
         { "name": "Hazelnuts", "emoji": "🌰" }
       ],
       "oomph": [
-        { "name": "Protein Powder", "emoji": "💪" },
         { "name": "Cinnamon", "emoji": "🫙" }
       ]
     }
