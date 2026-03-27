@@ -65,9 +65,9 @@
 **US-5: Re-spin for a new recipe**
 > As a user, I want to spin again after seeing a recipe so that I can get a different suggestion.
 
-- [ ] After the recipe card is revealed, the spin button is re-enabled.
-- [ ] Pressing spin again clears the previous recipe card and starts a new spin cycle.
-- [ ] Consecutive spins should not return the same recipe (avoid immediate repeats).
+- [x] After the recipe card is revealed, the spin button is re-enabled.
+- [x] Pressing spin again clears the previous recipe card and starts a new spin cycle.
+- [x] Consecutive spins should not return the same recipe (avoid immediate repeats).
 
 ### Non-Goals (v1)
 
