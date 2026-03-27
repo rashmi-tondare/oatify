@@ -33,13 +33,13 @@
 **US-1: Spin the slot machine**
 > As a user, I want to press a button to spin the slot machine so that I get a random overnight oats recipe.
 
-- [ ] A clearly visible "Spin" button triggers the animation.
-- [ ] All four reels (Liquid, Fruit, Crunch, Oomph) begin spinning simultaneously.
-- [ ] Each reel rapidly cycles through emoji from its category's ingredient pool across all recipes.
-- [ ] Reels land in a staggered sequence (Liquid → Fruit → Crunch → Oomph), each stopping ~0.3–0.5s after the previous.
-- [ ] The selected recipe is chosen randomly from the 10 available recipes.
-- [ ] Each reel lands on the hero emoji (first ingredient) for its category from the selected recipe.
-- [ ] The spin button is disabled during the animation to prevent double-triggers.
+- [x] A clearly visible "Spin" button triggers the animation.
+- [x] All four reels (Liquid, Fruit, Crunch, Oomph) begin spinning simultaneously.
+- [x] Each reel rapidly cycles through emoji from its category's ingredient pool across all recipes.
+- [x] Reels land in a staggered sequence (Liquid → Fruit → Crunch → Oomph), each stopping ~0.3–0.5s after the previous.
+- [x] The selected recipe is chosen randomly from the 10 available recipes.
+- [x] Each reel lands on the hero emoji (first ingredient) for its category from the selected recipe.
+- [x] The spin button is disabled during the animation to prevent double-triggers.
 
 **US-2: View the full recipe**
 > As a user, I want to see the full recipe after the slots land so that I know all the ingredients I need.
