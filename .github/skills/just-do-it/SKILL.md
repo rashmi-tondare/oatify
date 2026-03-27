@@ -14,6 +14,14 @@ A user story identifier. Accepts any of:
 
 ## Workflow
 
+### 0. Create a feature branch
+
+- Checkout and pull the latest `main` branch: `git checkout main && git pull`.
+- Create a new branch named `feat/<story>-<description>`:
+  - `<story>` = lowercase story ID (e.g. `us-3`).
+  - `<description>` = max 3 hyphenated words summarizing the story (e.g. `base-recipe-blurb`).
+- Example: `git checkout -b feat/us-3-base-recipe-blurb`.
+
 ### 1. Find the user story
 
 - Read the PRD at `.github/copilot-instructions.md`.
@@ -69,12 +77,13 @@ Follow these project conventions:
 **User prompt:** `/skill:just-do-it US-3`
 
 **Agent actions:**
-1. Reads PRD → finds US-3: "Understand the base recipe"
-2. Extracts 3 acceptance criteria (prep blurb, 1:1 ratio, sweetener suggestions)
-3. Reads `index.html`, `style.css`, `app.js`
-4. Adds a `<section class="prep-blurb">` to `index.html` with the blurb text
-5. Adds `.prep-blurb` styles to `style.css` matching the warm theme
-6. No JS changes needed (static content)
-7. Marks all 3 criteria as `[x]` in the PRD
-8. Reports: "Implemented US-3 — added prep blurb section. Files changed: `index.html`, `style.css`, `.github/copilot-instructions.md`"
+1. Checks out `main`, pulls latest, creates branch `feat/us-3-base-recipe-blurb`
+2. Reads PRD → finds US-3: "Understand the base recipe"
+3. Extracts 3 acceptance criteria (prep blurb, 1:1 ratio, sweetener suggestions)
+4. Reads `index.html`, `style.css`, `app.js`
+5. Adds a `<section class="prep-blurb">` to `index.html` with the blurb text
+6. Adds `.prep-blurb` styles to `style.css` matching the warm theme
+7. No JS changes needed (static content)
+8. Marks all 3 criteria as `[x]` in the PRD
+9. Reports: "Implemented US-3 on branch `feat/us-3-base-recipe-blurb`. Files changed: `index.html`, `style.css`, `.github/copilot-instructions.md`"
 
