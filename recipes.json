@@ -33,8 +33,7 @@
         { "name": "Granola", "emoji": "🥣" }
       ],
       "oomph": [
-        { "name": "Greek Yogurt", "emoji": "🍦" },
-        { "name": "Flax Seeds", "emoji": "🌾" }
+        { "name": "Greek Yogurt", "emoji": "🍦" }
       ]
     },
     {
@@ -119,26 +118,23 @@
       ],
       "oomph": [
         { "name": "Cinnamon", "emoji": "🫙" },
-        { "name": "Vanilla Extract", "emoji": "🧴" },
-        { "name": "Brown Sugar", "emoji": "🟤" }
+        { "name": "Vanilla Extract", "emoji": "🧴" }
       ]
     },
     {
-      "name": "Lemon Poppy Seed",
+      "name": "Cantaloupe Crunch",
       "liquid": [
-        { "name": "Greek Yogurt", "emoji": "🍦" },
-        { "name": "Oat Milk", "emoji": "🥛" }
+        { "name": "Almond Milk", "emoji": "🥛" }
       ],
       "fruit": [
-        { "name": "Lemon Zest", "emoji": "🍋" },
-        { "name": "Blueberries", "emoji": "🫐" }
+        { "name": "Cantaloupe", "emoji": "🍈" }
       ],
       "crunch": [
-        { "name": "Sliced Almonds", "emoji": "🌰" }
+        { "name": "Walnuts", "emoji": "🌰" },
+        { "name": "Almonds", "emoji": "🌰" }
       ],
       "oomph": [
-        { "name": "Honey Drizzle", "emoji": "🍯" },
-        { "name": "Vanilla Extract", "emoji": "🧴" }
+        { "name": "Cinnamon", "emoji": "🫙" }
       ]
     },
     {
@@ -155,8 +151,7 @@
         { "name": "Granola", "emoji": "🥣" }
       ],
       "oomph": [
-        { "name": "Pumpkin Spice", "emoji": "🎃" },
-        { "name": "Maple Syrup", "emoji": "🍁" }
+        { "name": "Pumpkin Spice", "emoji": "🎃" }
       ]
     },
     {
